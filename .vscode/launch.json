@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "_11022",
+            "request": "launch",
+            "mainClass": "_11022",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_11021",
+            "request": "launch",
+            "mainClass": "_11021",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_15552",
+            "request": "launch",
+            "mainClass": "_15552",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_25314",
+            "request": "launch",
+            "mainClass": "_25314",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_25304",
+            "request": "launch",
+            "mainClass": "_25304",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_8393",
+            "request": "launch",
+            "mainClass": "_8393",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_10950",
+            "request": "launch",
+            "mainClass": "_10950",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
+            "name": "_2739",
+            "request": "launch",
+            "mainClass": "_2739",
+            "projectName": "BaekJoon_eb96b81"
+        },
+        {
+            "type": "java",
             "name": "_2480",
             "request": "launch",
             "mainClass": "_2480",
