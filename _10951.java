@@ -11,7 +11,7 @@ public class _10951 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String input = "";
         
-        while((input = br.readLine()) != null && !input.isEmpty()) {
+        while((input = br.readLine()) != null && !input.isEmpty()) { // eof 사용
             StringTokenizer st = new StringTokenizer(input);
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
