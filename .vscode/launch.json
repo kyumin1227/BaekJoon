@@ -1,190 +1,386 @@
 {
-    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
-    // 기존 특성에 대한 설명을 보려면 가리킵니다.
-    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "_11022",
-            "request": "launch",
-            "mainClass": "_11022",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_11021",
-            "request": "launch",
-            "mainClass": "_11021",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_15552",
-            "request": "launch",
-            "mainClass": "_15552",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_25314",
-            "request": "launch",
-            "mainClass": "_25314",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_25304",
-            "request": "launch",
-            "mainClass": "_25304",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_8393",
-            "request": "launch",
-            "mainClass": "_8393",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_10950",
-            "request": "launch",
-            "mainClass": "_10950",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2739",
-            "request": "launch",
-            "mainClass": "_2739",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2480",
-            "request": "launch",
-            "mainClass": "_2480",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2525_2",
-            "request": "launch",
-            "mainClass": "_2525_2",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2525",
-            "request": "launch",
-            "mainClass": "_2525",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2884",
-            "request": "launch",
-            "mainClass": "_2884",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_14681",
-            "request": "launch",
-            "mainClass": "_14681",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2753",
-            "request": "launch",
-            "mainClass": "_2753",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_9498",
-            "request": "launch",
-            "mainClass": "_9498",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_1330",
-            "request": "launch",
-            "mainClass": "_1330",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_10172",
-            "request": "launch",
-            "mainClass": "_10172",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_10171",
-            "request": "launch",
-            "mainClass": "_10171",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_2588",
-            "request": "launch",
-            "mainClass": "_2588",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_10430",
-            "request": "launch",
-            "mainClass": "_10430",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_11382",
-            "request": "launch",
-            "mainClass": "_11382",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_18108",
-            "request": "launch",
-            "mainClass": "_18108",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "_10926_2",
-            "request": "launch",
-            "mainClass": "_10926_2",
-            "projectName": "BaekJoon_eb96b81"
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "_10926",
-            "request": "launch",
-            "mainClass": "_10926",
-            "projectName": "BaekJoon_eb96b81",
-            "args": "jooNas"
-        },
-        {
-            "type": "java",
-            "name": "_2557",
-            "request": "launch",
-            "mainClass": "_2557",
-            "projectName": "BaekJoon_eb96b81"
-        }
-    ]
+  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+  // 기존 특성에 대한 설명을 보려면 가리킵니다.
+  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "_25083",
+      "request": "launch",
+      "mainClass": "_25083",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_11718",
+      "request": "launch",
+      "mainClass": "_11718",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_5622",
+      "request": "launch",
+      "mainClass": "_5622",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2908",
+      "request": "launch",
+      "mainClass": "_2908",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_1152",
+      "request": "launch",
+      "mainClass": "_1152",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2675_2",
+      "request": "launch",
+      "mainClass": "_2675_2",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2675",
+      "request": "launch",
+      "mainClass": "_2675",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10809",
+      "request": "launch",
+      "mainClass": "_10809",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_11720",
+      "request": "launch",
+      "mainClass": "_11720",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_11654",
+      "request": "launch",
+      "mainClass": "_11654",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_9086Buffer",
+      "request": "launch",
+      "mainClass": "_9086Buffer",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_9086",
+      "request": "launch",
+      "mainClass": "_9086",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2743",
+      "request": "launch",
+      "mainClass": "_2743",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_27866",
+      "request": "launch",
+      "mainClass": "_27866",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_1546",
+      "request": "launch",
+      "mainClass": "_1546",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10811",
+      "request": "launch",
+      "mainClass": "_10811",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_3052",
+      "request": "launch",
+      "mainClass": "_3052",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_5597",
+      "request": "launch",
+      "mainClass": "_5597",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10813",
+      "request": "launch",
+      "mainClass": "_10813",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10810",
+      "request": "launch",
+      "mainClass": "_10810",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2562",
+      "request": "launch",
+      "mainClass": "_2562",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10818",
+      "request": "launch",
+      "mainClass": "_10818",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10871",
+      "request": "launch",
+      "mainClass": "_10871",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10807",
+      "request": "launch",
+      "mainClass": "_10807",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10951",
+      "request": "launch",
+      "mainClass": "_10951",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10952",
+      "request": "launch",
+      "mainClass": "_10952",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2439",
+      "request": "launch",
+      "mainClass": "_2439",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2438",
+      "request": "launch",
+      "mainClass": "_2438",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_11022",
+      "request": "launch",
+      "mainClass": "_11022",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_11021",
+      "request": "launch",
+      "mainClass": "_11021",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_15552",
+      "request": "launch",
+      "mainClass": "_15552",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_25314",
+      "request": "launch",
+      "mainClass": "_25314",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_25304",
+      "request": "launch",
+      "mainClass": "_25304",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_8393",
+      "request": "launch",
+      "mainClass": "_8393",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10950",
+      "request": "launch",
+      "mainClass": "_10950",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2739",
+      "request": "launch",
+      "mainClass": "_2739",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2480",
+      "request": "launch",
+      "mainClass": "_2480",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2525_2",
+      "request": "launch",
+      "mainClass": "_2525_2",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2525",
+      "request": "launch",
+      "mainClass": "_2525",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2884",
+      "request": "launch",
+      "mainClass": "_2884",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_14681",
+      "request": "launch",
+      "mainClass": "_14681",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2753",
+      "request": "launch",
+      "mainClass": "_2753",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_9498",
+      "request": "launch",
+      "mainClass": "_9498",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_1330",
+      "request": "launch",
+      "mainClass": "_1330",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10172",
+      "request": "launch",
+      "mainClass": "_10172",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10171",
+      "request": "launch",
+      "mainClass": "_10171",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2588",
+      "request": "launch",
+      "mainClass": "_2588",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10430",
+      "request": "launch",
+      "mainClass": "_10430",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_11382",
+      "request": "launch",
+      "mainClass": "_11382",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_18108",
+      "request": "launch",
+      "mainClass": "_18108",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_10926_2",
+      "request": "launch",
+      "mainClass": "_10926_2",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "_10926",
+      "request": "launch",
+      "mainClass": "_10926",
+      "projectName": "BaekJoon_eb96b81",
+      "args": "jooNas"
+    },
+    {
+      "type": "java",
+      "name": "_2557",
+      "request": "launch",
+      "mainClass": "_2557",
+      "projectName": "BaekJoon_eb96b81"
+    }
+  ]
 }
