@@ -9,8 +9,8 @@ public class _11720 {
         char[] array = number.toCharArray();
         int total = 0;
 
-        for(int i=0; i<num; i++) {
-            total+=array[i]-48;
+        for (int i = 0; i < num; i++) {
+            total += array[i] - 48;
         }
         System.out.println(total);
     }
