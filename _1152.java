@@ -7,8 +7,9 @@ public class _1152 {
 
         String S = sc.nextLine();
         StringTokenizer st = new StringTokenizer(S);
-        
+
         System.out.println(st.countTokens());
-        
+        // st의 공백 개수 체크
+
     }
 }
