@@ -27,33 +27,29 @@
 // 영석이가 세로로 읽은 순서대로 글자들을 출력한다. 이때, 글자들을 공백 없이 연속해서 출력한다. 
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class _10798 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         String line;
-        char[][] array = new char[5][];
-        char[][] arrayCopy = new char[5][15];
+        char[][] array = new char[5][15];
 
         for (int i = 0; i < array.length; i++) {
             line = sc.nextLine();
-            array[i] = line.toCharArray();
-            for (int j = 0; j < 15; j++) {
-                if (j < array[i].length) {
-                    arrayCopy[i][j] = array[i][j];
-                } else {
-                    arrayCopy[i][j] = '%';
-                }
-            }
+            // Arrays.copyOf(배열, 길이)
+            // 배열을 복사하여 원하는 길이로 반환시켜줍니다.
+            array[i] = Arrays.copyOf(line.toCharArray(), 15);
         }
 
         for (int i = 0; i < 15; i++) {
             for (int j = 0; j < 5; j++) {
-                if (arrayCopy[j][i] == '%') {
+                // '\0'은 char의 null입니다.
+                if (array[j][i] == '\0') {
                     continue;
                 } else {
-                    System.out.print(arrayCopy[j][i]);
+                    System.out.print(array[j][i]);
                 }
             }
         }
