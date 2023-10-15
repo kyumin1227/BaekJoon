@@ -2,7 +2,8 @@
   "java.project.sourcePaths": [
     "深化",
     "9. 約数、倍数と素数",
+    "11. Time Complexity",
     "10. Geometry - rectangular and triangle",
-    "11. Time Complexity"
+    "12. Brute force"
   ]
 }
