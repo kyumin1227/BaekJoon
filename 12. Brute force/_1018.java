@@ -11,28 +11,48 @@ public class _1018 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        int min;
+        int min = 64;
 
         // 배열에 할당
-        String[][] colorArray = new String[M][N];
+        String[][] colorArray = new String[N][M];
         for (int i = 0; i < N; i++) {
             s = bf.readLine();
             colorArray[i] = s.split("");
         }
 
+        loopOut:
         for (int i = 0; i <= N - 8; i++) {
             for (int j = 0; j <= M - 8; j++) {
-                int count = 0;
+                int countW = 64; // W 시작
+                int countB = 64; // B 시작
                 // 8 * 8 체크
                 for (int ii = 0; ii < 8; ii++) {
                     for (int jj = 0; jj < 8; jj++) {
-                        if (colorArray[i + ii][j + jj] == "B") {
-                            
+                        if (colorArray[i + ii][j + jj].equals("B") && (ii + jj + 1) % 2 == 0) {
+                            countW -= 1;
+                        }
+                        if (colorArray[i + ii][j + jj].equals("W") && (ii + jj + 1) % 2 == 1) {
+                            countW -= 1;
+                        }
+                        if (colorArray[i + ii][j + jj].equals("W") && (ii + jj + 1) % 2 == 0) {
+                            countB -= 1;
+                        }
+                        if (colorArray[i + ii][j + jj].equals("B") && (ii + jj + 1) % 2 == 1) {
+                            countB -= 1;
                         }
                     }
                 }
+                if (countW <= min) {
+                    min = countW;
+                }
+                if (countB <= min) {
+                    min = countB;
+                }
+                if (min == 0) {
+                    break loopOut;
+                }
             }
         }
-
+            System.out.println(min);
     }
 }
