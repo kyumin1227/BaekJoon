@@ -20,19 +20,13 @@ public class _11650 {
         for (int i = N - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j][0] > array[j + 1][0]) {
-                    int num1 = array[j][0];
-                    int num2 = array[j][1];
-                    array[j][0] = array[j + 1][0];
-                    array[j][1] = array[j + 1][1];
-                    array[j + 1][0] = num1;
-                    array[j + 1][1] = num2;
+                    int[] num = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = num;
                 } else if (array[j][0] == array[j + 1][0] && array[j][1] > array[j + 1][1]) {
-                    int num1 = array[j][0];
-                    int num2 = array[j][1];
-                    array[j][0] = array[j + 1][0];
-                    array[j][1] = array[j + 1][1];
-                    array[j + 1][0] = num1;
-                    array[j + 1][1] = num2;
+                    int[] num = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = num;
                 }
             }
         }
