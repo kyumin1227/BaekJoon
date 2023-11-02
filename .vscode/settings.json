@@ -1,10 +1,9 @@
 {
   "java.project.sourcePaths": [
-    "深化",
-    "9. 約数、倍数と素数",
+    "13. Alignment",
     "12. Brute force",
     "11. Time Complexity",
     "10. Geometry - rectangular and triangle",
-    "13. Alignment"
+    "00. Java Practice"
   ]
 }
