@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MapPractice",
+      "request": "launch",
+      "mainClass": "MapPractice",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
       "name": "_18870",
       "request": "launch",
       "mainClass": "_18870",
