@@ -141,7 +141,7 @@ public class ArrayList<E> implements List<E> {
     }
     
     public boolean contains(Object value) {
-        if (indexOf(value) > 0) {
+        if (indexOf(value) >= 0) {
             return true;
         } else {
             return false;
