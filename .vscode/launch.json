@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_10828",
+      "request": "launch",
+      "mainClass": "_10828",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
       "name": "ArrayListTest",
       "request": "launch",
       "mainClass": "List.ArrayListTest",
