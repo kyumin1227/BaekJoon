@@ -9,30 +9,17 @@ public class _9093 {
         int T = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < T; i++) {
-            bw.write(reverse.reverseString(br.readLine()) + "\n");
+            String[] array = br.readLine().split(" ");
+
+            for (int j = 0; j < array.length; j++) {
+                StringBuilder sb = new StringBuilder(array[j]);
+                bw.write(sb.reverse() + " ");
+            }
+            bw.write("\n");
         }
 
         bw.flush();
         bw.close();
 
-    }
-}
-
-class reverse {
-
-    public static String reverseString(String str) {
-
-        String[] array = str.split(" ");
-        String s = "";
-
-        for(int i = 0; i < array.length; i++) {
-            char[] cArray = array[i].toCharArray();
-            for (int j = array[i].length() - 1; j >= 0; j--) {
-                s += Character.toString(cArray[j]);
-            }
-            s += " ";
-        }
-
-        return s;
     }
 }
