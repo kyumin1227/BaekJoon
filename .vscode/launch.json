@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_2607",
+      "request": "launch",
+      "mainClass": "_2607",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_2870",
+      "request": "launch",
+      "mainClass": "_2870",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
+      "name": "_8958",
+      "request": "launch",
+      "mainClass": "_8958",
+      "projectName": "BaekJoon_eb96b81"
+    },
+    {
+      "type": "java",
       "name": "_10828",
       "request": "launch",
       "mainClass": "_10828",
