@@ -1,41 +1,47 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class _1406 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        LinkedList<Character> answer = new LinkedList<>();
+//        왼쪽 스택과 오른쪽 스택을 만들어 커서 위치 확인
+        Stack<Character> leftStack = new Stack<>();
+        Stack<Character> rightStack = new Stack<>();
         for (char c : br.readLine().toCharArray()) {
-            answer.add(c);
+            leftStack.push(c);
         }
         int M = Integer.parseInt(br.readLine());    // 명령어 수
-        int cursor = answer.size(); // 커서 위치
 
 //        명령어 수행
-        for (int i = 0; i < M; i++) {
+        while (M-- > 0) {
             String s = br.readLine();
             if(s.equals("L")) {
-                if(cursor > 0)
-                    cursor--;
+                if(leftStack.size() > 0)
+                    rightStack.push(leftStack.pop());
             } else if (s.equals("D")) {
-                if(cursor < answer.size())
-                    cursor++;
+                if(rightStack.size() > 0)
+                    leftStack.push(rightStack.pop());
             } else if (s.equals("B")) {
-                if(cursor != 0 && answer.size() != 0) {
-                    answer.remove(cursor - 1);
-                    cursor--;
+                if(leftStack.size() > 0) {
+                    leftStack.pop();
                 }
             } else {
-                answer.add(cursor, s.charAt(2));
-                cursor++;
+                leftStack.push(s.charAt(2));
             }
         }
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        for (char c : answer) {
+
+        while (rightStack.size() > 0) {
+            leftStack.push(rightStack.pop());
+        }
+
+        for (char c : leftStack) {
             bw.write(c);
         }
+
         bw.flush();
         bw.close();
     }
