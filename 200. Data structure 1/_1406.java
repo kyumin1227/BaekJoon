@@ -6,13 +6,10 @@ import java.util.ArrayList;
 public class _1406 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        char[] array = br.readLine().toCharArray();
-        ArrayList<Character> answer = new ArrayList<>();
-        for(char c : array) {
-            answer.add(c);
-        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(br.readLine());
         int M = Integer.parseInt(br.readLine());    // 명령어 수
-        int cursor = answer.size(); // 커서 위치
+        int cursor = sb.length(); // 커서 위치
 
 //        명령어 수행
         for (int i = 0; i < M; i++) {
@@ -21,26 +18,20 @@ public class _1406 {
                 if(cursor > 0)
                     cursor--;
             } else if (s.equals("D")) {
-                if(cursor < answer.size())
+                if(cursor < sb.length())
                     cursor++;
             } else if (s.equals("B")) {
-                if(cursor != 0 && answer.size() != 0) {
-                    answer.remove(cursor - 1);
+                if(cursor != 0 && sb.length() != 0) {
+                    sb.deleteCharAt(cursor - 1);
                     cursor--;
                 }
             } else {
                 String[] sArray = s.split(" ");
-                char[] c = sArray[1].toCharArray();
-                answer.add(cursor, c[0]);
+                sb.insert(cursor, sArray[1]);
                 cursor++;
             }
         }
 
-//        출력할 문자열 생성
-        StringBuilder sb = new StringBuilder();
-        for (char c : answer) {
-            sb.append(c);
-        }
         System.out.println(sb);
     }
 }
