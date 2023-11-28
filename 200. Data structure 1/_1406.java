@@ -1,15 +1,16 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class _1406 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        sb.append(br.readLine());
+        LinkedList<Character> answer = new LinkedList<>();
+        for (char c : br.readLine().toCharArray()) {
+            answer.add(c);
+        }
         int M = Integer.parseInt(br.readLine());    // 명령어 수
-        int cursor = sb.length(); // 커서 위치
+        int cursor = answer.size(); // 커서 위치
 
 //        명령어 수행
         for (int i = 0; i < M; i++) {
@@ -18,20 +19,24 @@ public class _1406 {
                 if(cursor > 0)
                     cursor--;
             } else if (s.equals("D")) {
-                if(cursor < sb.length())
+                if(cursor < answer.size())
                     cursor++;
             } else if (s.equals("B")) {
-                if(cursor != 0 && sb.length() != 0) {
-                    sb.deleteCharAt(cursor - 1);
+                if(cursor != 0 && answer.size() != 0) {
+                    answer.remove(cursor - 1);
                     cursor--;
                 }
             } else {
-                String[] sArray = s.split(" ");
-                sb.insert(cursor, sArray[1]);
+                answer.add(cursor, s.charAt(2));
                 cursor++;
             }
         }
 
-        System.out.println(sb);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        for (char c : answer) {
+            bw.write(c);
+        }
+        bw.flush();
+        bw.close();
     }
 }
