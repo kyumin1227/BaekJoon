@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 public class _10845 {
     public static void main(String[] args) throws IOException {
@@ -10,18 +9,15 @@ public class _10845 {
         int N = Integer.parseInt(br.readLine());
 
         Queue<Integer> queue = new LinkedList<>();
-        Stack<Integer> last = new Stack<>();
-
-        int size = 0;
+        int last = 0;   // 마지막에 추가한 값
 
         while(N-- > 0) {
             String s = br.readLine();
 
             switch (s) {
                 case "pop":
-                    if(size > 0) {
+                    if(!queue.isEmpty()) {
                         bw.write(queue.poll() + "\n");
-                        size--;
                     } else {
                         bw.write("-1\n");
                     }
@@ -47,15 +43,14 @@ public class _10845 {
                     if(queue.isEmpty()) {
                         bw.write(-1 + "\n");
                     } else {
-                        bw.write(last.peek() + "\n");
+                        bw.write(last + "\n");
                     }
                     break;
                 default:
                     String[] sArray = s.split(" ");
                     int n = Integer.parseInt(sArray[1]);
                     queue.add(n);
-                    last.push(n);
-                    size++;
+                    last = n;
             }
         }
 
