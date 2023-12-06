@@ -19,8 +19,10 @@
       <sourceFolder url="file://$MODULE_DIR$/13. Alignment" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/200. Data structure 1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/201. Data structure 1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/203. Data structure 1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/out" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
