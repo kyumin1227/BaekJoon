@@ -1,9 +1,7 @@
-package DP;
-
 import java.io.IOException;
 import java.util.Scanner;
 
-public class practiceProblem_2 {
+public class _1463 {
     static int[] dp;
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
@@ -20,15 +18,7 @@ public class practiceProblem_2 {
 
         } else {
             int num = 0;
-            // 5로 나누기
-            if (x % 5 == 0) {
-                num = x / 5;
-                if (dp[num] == 0 || dp[num] > dp[x] + 1) {
-                    dp[num] = dp[x] + 1;
-                    cal(num);
-                }
-            }
-
+            
             // 3으로 나누기
             if (x % 3 == 0) {
                 num = x / 3;
