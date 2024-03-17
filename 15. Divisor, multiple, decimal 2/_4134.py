@@ -1,3 +1,5 @@
+# 에라토스테네스 체 메모리 초과 및 시간 초과로 실패
+
 import sys
 
 input = sys.stdin.readline
