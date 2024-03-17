@@ -1,44 +1,28 @@
 import sys
+from math import gcd
 
-n = int(input())
+n = int(sys.stdin.readline().rstrip())
+
+start_num = int(sys.stdin.readline().rstrip())
 
 arr = []
-num1 = 0
-num2 = 0
-gcd = 0
 
-for i in range(n):
-    num = int(sys.stdin.readline().rstrip())
-    arr.append(num)
-    if i == 2:
-        num1 = arr[-1] - arr[-2]
-        num2 = arr[-2] - arr[-3]
-        while num2 !=0:
-            num1, num2 = num2, num1 % num2
-        gcd = num1
+target_num = int(sys.stdin.readline().rstrip())
 
-    elif i > 2:
-        num1 = arr[-1] - arr[-2]
-        num2 = 1
-        check = False
-        
-        while gcd * num2 < num1:
-            if gcd * num2 == num1:
-                check = True
-                break
-            num2 += 1
-        
-        if not check:
-            num2 = gcd
-            while num2 !=0:
-                num1, num2 = num2, num1 % num2
-            gcd = num1
+arr.append(target_num - start_num)
 
-num = 1
-count = 0
-while gcd * num + arr[0] < arr[-1]:
-    if not arr[0] + gcd * num in arr:
-        count += 1
-    num += 1
+for i in range(n - 2):
+    input_num = int(sys.stdin.readline().rstrip())
+    arr.append(input_num - target_num)
+    target_num = input_num
 
-print(count)
+g = arr[0]
+
+for i in range(1, len(arr)):
+    g = gcd(g, arr[i])
+
+result = 0
+for num in arr:
+    result += num // g - 1
+
+print(result)
