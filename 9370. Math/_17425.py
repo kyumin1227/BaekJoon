@@ -1,16 +1,36 @@
+import sys
+
+input = sys.stdin.readline
+
+# 테스트 케이스의 개수
 t = int(input())
 
-for j in range(t):
-    n = int(input())
+number_list = list()    # 입력 순서를 유지한 숫자 리스트
+result_dic = dict() # 수를 key로 해당 값을 item으로 저장 하는 dict
 
-    # 1은 모든 수의 약수이므로 다 더하기
-    result = n
+for i in range(t):
+    number_list.append(int(input()))
 
-    # i를 i 씩 올리면서 n보다 같거나 클 때까지 확인해서 i를 약수로 가지는 수의 개수를 확인
-    for i in range(2, n + 1):
-        num = i
-        count = n // i
+sorted_list = sorted(number_list)   # 크기 순으로 정렬한 숫자 리스트
 
-        result += i * count
+for num in sorted_list:
+    result_dic[num] = num
 
-    print(result)
+for i in range(2, sorted_list[-1] + 1):
+    num = i
+    count = 1
+    index = 0
+
+    while num <= sorted_list[-1] + i:
+        while num > sorted_list[index]:
+            result_dic[sorted_list[index]] += i * (count - 1)
+            index += 1
+
+            if index == len(sorted_list):
+                break
+        
+        num += i
+        count += 1
+
+for num in number_list:
+    print(result_dic[num])
