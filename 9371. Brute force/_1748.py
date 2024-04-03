@@ -1,13 +1,14 @@
 n = int(input())
 
 digit_count = 0
-number_digit = 1
+number_digit = 0
 
-for i in range(1, n + 1):
-    
-    if i == 10 ** number_digit:
+while True:
+    digit_count += n
+    n -= 9 * (10 ** number_digit)
+    if (n > 0):
         number_digit += 1
-
-    digit_count += number_digit
+    else:
+        break
 
 print(digit_count)
