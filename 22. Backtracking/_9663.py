@@ -1,3 +1,5 @@
+# 가로는 반드시 모두 차지하기에 한 줄에는 한번씩만 값을 추가
+
 def changeBoard(arg_x, arg_y, arg_z, arg_bool):
     target_list[arg_x][arg_y][arg_z] = arg_bool
 
