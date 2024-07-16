@@ -8,6 +8,9 @@ def bruteforce(arg_start, arg_list, arg_cost):
             min_cost = arg_cost
         return
     
+    if arg_cost >= min_cost:
+        return
+    
     for city in graph[arg_start]:
         if city[0] not in arg_list:
             arg_list.append(arg_start)
