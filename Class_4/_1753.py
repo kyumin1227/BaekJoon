@@ -1,9 +1,10 @@
-from sys import stdin
+import sys
 
 def get_smallest_node():
+    """값이 가장 작은 노드 가져오는 함수"""
     index = 0
     min_num = float("inf")
-    for i in range(n - 1):
+    for i in range(1, n + 1):
         if not visited_li[i] and min_num > distance_li[i]:
             min_num = distance_li[i]
             index = i
@@ -25,7 +26,7 @@ def dijkstra(start):
                 distance_li[i[0]] = distance_li[now] + i[1]
 
 
-input = stdin.readline
+input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
@@ -41,8 +42,11 @@ for _ in range(m):
 
 dijkstra(start)
 
-for i in range(1, len(distance_li)):
+for i in range(1, n + 1):
     if distance_li[i] == float("inf"):
-        print("INF")
+        sys.stdout.write("INF\n")
     else:
-        print(distance_li[i])
+        sys.stdout.write(f"{distance_li[i]}\n")
+
+sys.stdout.flush()
+sys.stdout.close()
