@@ -33,7 +33,7 @@ def draw_triangle(arg_x, arg_y, arg_line, arg_direction):
 
 n = int(input())
 
-star_background = [[False for _ in range(6 * (n // 3))] for _ in range(n)]
+star_background = [[False for _ in range(n * 2)] for _ in range(n)]
 
 # 몇 제곱인지 계산
 k = 0
