@@ -27,8 +27,8 @@ def draw(arg_size, arg_x, arg_y, arg_size_x, arg_size_y):
 
 n = int(input())
 
-x = 1
-y = 1
+x = 1   # 가로 크기
+y = 1   # 세로 크기
 
 for _ in range(n - 1):
     x += 1
