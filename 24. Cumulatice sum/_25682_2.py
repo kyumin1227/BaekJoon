@@ -1,5 +1,10 @@
 from sys import stdin
 
+def cal_board(x1, y1, x2, y2):
+    """n 크기의 체스판 크기를 구해주는 함수"""
+    result = dp[y2 + 1][x2 + 1] - dp[y2 + 1][x1] - dp[y1][x2 + 1] + dp[y1][x1]
+    return result
+
 input = stdin.readline
 
 h, w, n = map(int, input().split())
@@ -15,40 +20,19 @@ for _ in range(h):
     datas.append(temp)
     t_default = "W" if t_default == "B" else "B"
 
-datas.append([0 for _ in range(w)])
+# 구간합 계산
+dp = [[0 for _ in range(w + 1)] for _ in range(h + 1)]
 
-# 각 결과를 저장할 dp 리스트 생성
-dp = [[0 for _ in range(w - n + 1)] for _ in range(h - n + 1)]
+for x in range(w):
+    for y in range(h):
+        dp[y + 1][x + 1] = datas[y][x] + dp[y + 1][x] + dp[y][x + 1] - dp[y][x]
 
-for i in range(n):
-    for j in range(n):
-        dp[0][0] += datas[i][j]
-
-# 각 체스판 별로 체크
-for y in range(h - n + 1):
-
-    # x가 0인 경우에는 위에서 한칸 내려서 계산 (y - 1)
-    if y != 0:
-        dp[y][0] = dp[y - 1][0]
-        for i in range(n):
-            dp[y][0] -= datas[y - 1][i]
-            dp[y][0] += datas[y + n - 1][i]
-    
-    # x가 1 이상인 경우에는 옆에서 한칸 밀어서 계산 (x - 1)
-    for x in range(1, w - n + 1):
-        if y == 0 and x == 0:
-            continue
-
-        dp[y][x] = dp[y][x - 1]
-        for i in range(y, y + n):
-            dp[y][x] -= datas[i][x - 1]
-            dp[y][x] += datas[i][x + n - 1]
-
+# 결과 계산
 min_num = n * n
 
-for line in dp:
-    for num in line:
-        # 현재의 최솟값, B 시작의  값, W 시작의 값 중 최솟값 가져옴
-        min_num = min(min_num, num, n * n - num)
+for x in range(w - n + 1):
+    for y in range(h - n + 1):
+        result = cal_board(x, y, x + n - 1, y + n - 1)
+        min_num = min(min_num, result, n * n - result)
 
 print(min_num)
