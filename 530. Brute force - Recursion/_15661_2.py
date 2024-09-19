@@ -24,7 +24,7 @@ def claculate_stats():
             link_stats += board[i][j]
 
     # 능력치 비교
-    compare = max(start_stats, link_stats) - min(start_stats, link_stats)
+    compare = abs(start_stats - link_stats)
     global result
 
     result = min(result, compare)
@@ -35,20 +35,13 @@ def bruteforce(arg_index, arg_count):
     # 모든 경우의 수의 절반을 생성
     if len(target_team) == arg_count:
         target.append(target_team[:])
-
-    if arg_count == n // 2 and len(target_team) == 0:
-        for i in range(arg_index, 1):
-            if i not in target_team:
-                target_team.append(i)
-                bruteforce(i + 1, arg_count)
-                target_team.pop()
+        return
     
-    else:
-        for i in range(arg_index, n):
-            if i not in target_team:
-                target_team.append(i)
-                bruteforce(i + 1, arg_count)
-                target_team.pop()
+    for i in range(arg_index, n):
+        if i not in target_team:
+            target_team.append(i)
+            bruteforce(i + 1, arg_count)
+            target_team.pop()
 
 
 input = stdin.readline
@@ -64,13 +57,11 @@ for _ in range(n):
 
 target = []
 target_team = []
-count = 0
 
-for i in range(2, n // 2 + 1):
+for i in range(1, n // 2 + 1):
     bruteforce(0, i)
 
 while target:
-    count += 1
     claculate_stats()
 
 print(result)
