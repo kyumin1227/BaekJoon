@@ -9,23 +9,20 @@ def check_rect(arg_x, arg_y, arg_size):
     # 1로만 이루어진 경우 2
     # 분할할 필요가 있는 경우 3
 
-    temp = 0
-    isZero = True
+    first_value = datas[arg_y][arg_x]
+
     for i in range(arg_size):
         for j in range(arg_size):
-            temp += datas[arg_y + i][arg_x + j]
-            if temp != 0:
-                isZero = False
+            if first_value != datas[arg_y + i][arg_x + j]:
+                divide_rect(arg_x, arg_y, arg_size // 3)
+                return 3
 
-    if temp == -arg_size * arg_size:
+    if first_value == -1:
         return 0
-    elif temp == 0 and isZero:
+    elif first_value == 0:
         return 1
-    elif temp == arg_size * arg_size:
+    else:
         return 2
-    
-    divide_rect(arg_x, arg_y, arg_size // 3)
-    return 3
 
 def divide_rect(arg_x, arg_y, arg_size):
     """사각형을 9등분 하여 que에 추가하는 함수"""
@@ -35,7 +32,7 @@ def divide_rect(arg_x, arg_y, arg_size):
 
 input = stdin.readline
 n = int(input())
-datas = [list(map(int, input().split())) for _ in range(n)]
+datas = [tuple(map(int, input().split())) for _ in range(n)]
 result = [0] * 4
 
 que = deque()
