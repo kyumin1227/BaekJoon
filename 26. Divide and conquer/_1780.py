@@ -1,13 +1,8 @@
-from collections import deque
 from sys import stdin
 
 def check_rect(arg_x, arg_y, arg_size):
     """사각형을 검사하여 하나의 숫자로만 이루어져있는지 확인하는 함수"""
-    # 반환값
-    # -1로만 이루어진 경우 0
-    # 0으로만 이루어진 경우 1
-    # 1로만 이루어진 경우 2
-    # 분할할 필요가 있는 경우 3
+    # -1, 0, 1 에 해당하는 경우 결과에 추가
 
     first_value = datas[arg_y][arg_x]
 
@@ -15,32 +10,23 @@ def check_rect(arg_x, arg_y, arg_size):
         for j in range(arg_size):
             if first_value != datas[arg_y + i][arg_x + j]:
                 divide_rect(arg_x, arg_y, arg_size // 3)
-                return 3
+                return
 
-    if first_value == -1:
-        return 0
-    elif first_value == 0:
-        return 1
-    else:
-        return 2
+    global result
+    result[first_value + 1] += 1
 
 def divide_rect(arg_x, arg_y, arg_size):
-    """사각형을 9등분 하여 que에 추가하는 함수"""
+    """사각형을 9등분 하여 chaek 하는 함수"""
     for i in range(9):
-        que.append((arg_x + i % 3 * arg_size, arg_y + i // 3 * arg_size, arg_size))
+        check_rect(arg_x + (i % 3 * arg_size), arg_y + (i // 3 * arg_size), arg_size)
 
 
 input = stdin.readline
 n = int(input())
 datas = [tuple(map(int, input().split())) for _ in range(n)]
-result = [0] * 4
+result = [0] * 4    # 0: -1, 1: 0, 2: 1
 
-que = deque()
-que.append((0, 0, n))   # 기본값 추가
-
-while que:
-    # que에서 뺀 값을 함수에 넣고 반환값에 따라 결과값 추가
-    result[check_rect(*que.popleft())] += 1
+check_rect(0, 0, n)
 
 for i in range(3):
     print(result[i])
