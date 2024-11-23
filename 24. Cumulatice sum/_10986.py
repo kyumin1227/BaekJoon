@@ -1,25 +1,19 @@
+from sys import stdin
+input = stdin.readline
+
 n, m = map(int, input().split())
 numbers = tuple(map(int, input().split()))
 
-# 시작 위치에 따라 m으로 나누어 떨어지는 수 계산
-dp = [-1 for _ in range(n)]
+r = [0] * m
+
+sum_number = 0
 for i in range(n):
-    sum_num = 0
+    sum_number += numbers[i]
+    r[sum_number % m] += 1
 
-    for j in range(i, n):
-        sum_num += numbers[j]
-
-        if sum_num % m == 0:
-            dp[i] = j
-            break
-
-# m으로 나누어 떨어지는 구간의 계산
-answer = 0
-for start in range(n):
-    pointer = start
-
-    while (pointer < n and dp[pointer] != -1):
-        answer += 1
-        pointer = dp[pointer] + 1
+answer = r[0]
+# 나머지 n - 나머지 n = 0 이므로 nC2 계산
+for i in range(m):
+    answer += (r[i] ** 2 - r[i]) // 2
 
 print(answer)
